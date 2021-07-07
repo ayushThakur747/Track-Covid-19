@@ -11,9 +11,9 @@ const Chart = ({data:{confirmed, deaths, recovered},country})=> {
     useEffect(()=>{
 
         const fetchAPI = async () =>{
-            setDailyData(await fetchDailyData());
+            setDailyData(await fetchDailyData());//to get prev days daily data so that we can plot a graph according to date and covid records
         }
-        console.log(dailyData);
+        //console.log(dailyData);
         fetchAPI();
     },[]);
 
